@@ -1,0 +1,50 @@
+{{ define "main" }}
+  <section class="section pt-7">
+    <div class="container">
+      <div class="row justify-center">
+        <article class="lg:col-10">
+          {{ $image := .Params.image }}
+          {{ if $image }}
+            <div class="mb-10">
+              {{/* article header: real srcset up to 2x the ~1050px lg:col-10 slot,
+                   clamped to each source's own width so small originals are
+                   never upscaled */}}
+              {{ partial "components/img.html" (dict
+                "Src" $image
+                "Alt" .Title
+                "Widths" (slice 575 768 1024 1400 2100)
+                "Sizes" "(max-width: 575px) 100vw, (max-width: 1199px) 92vw, 1050px"
+                "Class" "w-full rounded-image"
+              ) }}
+            </div>
+          {{ end }}
+          <h1 class="h2 mb-4">
+            {{ .Title }}
+          </h1>
+          <ul class="mb-4">
+            <li class="mr-4 inline-block">
+              <i class="fa-regular fa-calendar mr-2"></i>
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
+            </li>
+          </ul>
+          <div class="content mb-10">
+            {{ .Content }}
+          </div>
+
+          {{ with .Params.gallery_images }}
+            <div class="mt-10">
+              <h3 class="mb-6">{{ T "gallery" | default "Gallery" }}</h3>
+              <div class="row">
+                {{ range . }}
+                  <div class="md:col-4 mb-4">
+                    {{ partial "image" (dict "Src" (strings.TrimPrefix "/" .) "Context" $.Page "Alt" (printf "%s — gallery image" $.Title) "Size" "800x" "Class" "w-full rounded-image") }}
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </article>
+      </div>
+    </div>
+  </section>
+{{ end }}

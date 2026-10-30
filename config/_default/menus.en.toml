@@ -1,0 +1,53 @@
+# Main menu
+[[main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 1
+
+[[main]]
+  name = "Projects"
+  pageRef = "/projects"
+  weight = 2
+
+[[main]]
+  name = "Team"
+  pageRef = "/team"
+  weight = 3
+
+[[main]]
+  name = "Get Involved"
+  pageRef = "/get-involved"
+  weight = 4
+
+[[main]]
+  name = "News"
+  pageRef = "/news"
+  weight = 5
+
+[[main]]
+  name = "Donate"
+  pageRef = "/donate"
+  weight = 6
+
+# Footer menu
+[[footer]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 1
+
+[[footer]]
+  name = "Impressum"
+  pageRef = "/impressum"
+  weight = 2
+
+[[footer]]
+  name = "Privacy Policy"
+  pageRef = "/datenschutz"
+  weight = 3
+
+[[footer]]
+  name = "Bylaws"
+  url = "/documents/satzung-rumaenische-diaspora-initiative-ev.pdf"
+  weight = 4
+  [footer.params]
+    asset = true

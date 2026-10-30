@@ -1,0 +1,38 @@
+<div class="bg-body dark:bg-darkmode-body h-full flex flex-col">
+  {{ $image:= .Params.image | default "/images/fallback.png" }}
+  <div class="mb-6 h-64 overflow-hidden rounded-image">
+    {{/* h-64 box, ~322px wide at lg -> 644x512 retina px. CoverW/CoverH let the
+         partial derive the width each aspect ratio actually needs. */}}
+    {{ partial "components/img.html" (dict "Src" $image "Alt" .Title "CoverW" 644 "CoverH" 512 "Class" "h-full w-full object-cover") }}
+  </div>
+  <h6 class="mb-3">
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  </h6>
+  {{ $categories:= .Params.categories }}
+  {{ if $categories }}
+    <ul class="mb-4">
+      <li class="mr-4 inline-block">
+        <i class="fa-regular fa-calendar mr-1"></i>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+      </li>
+      <li class="mr-4 inline-block">
+        <i class="fa-regular fa-folder mr-1"></i>
+        {{ range $i,$p:= $categories }}
+          <a
+            href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
+            class="ms-1"
+            >{{ . | humanize }}{{ if ne $i (sub (len $categories) 1) }}
+              {{ "," }}
+            {{ end }}
+          </a>
+        {{ end }}
+      </li>
+    </ul>
+  {{ end }}
+  <p class="mb-6 flex-grow">{{ .Summary | plainify | truncate 150 }}</p>
+  <a class="btn btn-outline-primary btn-sm self-center" href="{{ .RelPermalink }}">
+    {{ T "read_more" | default "Read More" }}
+  </a>
+</div>

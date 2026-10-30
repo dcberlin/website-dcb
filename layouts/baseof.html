@@ -1,0 +1,93 @@
+<!doctype html>
+<html
+  itemscope
+  class="{{- if not site.Params.theme_switcher -}}
+    {{- site.Params.theme_default -}}
+  {{- end -}}"
+  lang="{{ site.LanguageCode | default `en-US` }}"
+  itemtype="http://schema.org/WebPage">
+  <head>
+    <!-- head (don't cache it) -->
+    {{ partial "essentials/head.html" . }}
+
+
+    <!-- structured data -->
+    {{ partialCached "schema-organization.html" . }}
+    {{ if not .IsHome }}{{ partial "schema-breadcrumb.html" . }}{{ end }}
+
+    <!-- style (always cache it) -->
+    {{ partialCached "essentials/style.html" . }}
+
+    <!-- header scroll effect styles (in head to prevent FOUC) -->
+    <style>
+      :root { --header-height: 5rem; }
+      body { opacity: 0; }
+      body.loaded { opacity: 1; transition: opacity 0.1s; }
+      .header { background-color: #fff; border-bottom: 1px solid transparent !important; }
+      .header-scrolled { border-bottom-color: #d2d2d2 !important; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background-color: rgba(255, 255, 255, 0.6); transition: border-bottom-color 0.3s, backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s, background-color 0.3s; }
+      @media (min-width: 768px) {
+        body.is-home .header { position: fixed !important; top: 0; left: 0; right: 0; background-color: transparent; border-bottom-color: transparent !important; }
+        body.is-home .header.header-scrolled { background-color: rgba(255, 255, 255, 0.6); border-bottom-color: #d2d2d2 !important; }
+        body.is-home .header:has(#nav-toggle:checked) { background-color: rgba(255, 255, 255, 0.95) !important; border-bottom-color: #d2d2d2 !important; }
+        .home-banner-overlay { padding-top: 5rem; padding-bottom: 10rem; }
+      }
+      @media (max-width: 767px) {
+        .home-banner-card { min-height: 24rem; }
+        .home-banner-card > img { height: 100%; position: absolute; inset: 0; object-fit: cover; }
+      }
+      .nav-link.active { color: var(--color-primary); }
+    </style>
+
+  </head>
+
+  <body class="{{ if .IsHome }}is-home{{ end }}">
+    <script>document.body.classList.add('loaded');</script>
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "preloader.html" . }}
+      {{ partialCached "gtm-noscript.html" . }}
+    {{ else }}
+      {{ partial "preloader.html" . }}
+
+
+      <!-- tailwind size indicator -->
+      {{ partial "components/tw-size-indicator.html" . }}
+    {{ end }}
+
+
+    <!-- announcement -->
+    {{ partialCached "announcement.html" . }}
+
+
+    <!-- header (don't cache it) -->
+    {{ partial "essentials/header.html" . }}
+    {{ partial "search-modal.html" (dict "Context" . ) }}
+
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- footer -->
+    {{ partial "essentials/footer.html" . }}
+
+
+    <!-- script (always cache it) -->
+    {{ partialCached "essentials/script.html" . }}
+
+    <!-- header scroll script -->
+    <script>
+      (function() {
+        var header = document.querySelector(".header");
+        if (!header) return;
+        window.addEventListener("scroll", function() {
+          if (window.scrollY > 50) {
+            header.classList.add("header-scrolled");
+          } else {
+            header.classList.remove("header-scrolled");
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

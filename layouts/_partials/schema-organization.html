@@ -1,0 +1,37 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Diaspora Civică Berlin",
+  "alternateName": "DCB — Rumänische Diaspora Initiative e.V.",
+  "url": "{{ site.BaseURL }}",
+  {{/* logo.png and fallback.png live in assets/ — resolve through the
+       pipeline so the files are actually published */}}
+  {{- with resources.Get "images/logo.png" }}
+  "logo": "{{ .Permalink }}",
+  {{- end }}
+  {{- with resources.Get "images/fallback.png" }}
+  "image": "{{ .Permalink }}",
+  {{- end }}
+  "description": "{{ site.Params.metadata.description }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Oderstrasse 16",
+    "addressLocality": "Berlin",
+    "postalCode": "10247",
+    "addressCountry": "DE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@diasporacivica.berlin",
+    "contactType": "general",
+    "availableLanguage": ["Romanian", "German", "English"]
+  },
+  "sameAs": [
+    {{- range $i, $s := site.Params.social -}}
+      {{- if $i }}, {{ end -}}
+      "{{ $s.link }}"
+    {{- end -}}
+  ]
+}
+</script>

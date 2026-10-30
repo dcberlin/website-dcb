@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <section class="section-sm pb-0">
+    <div class="container">
+      <div class="row justify-center border-border dark:border-darkmode-border border-b pb-14">
+        <div class="lg:col-6 text-center">
+          {{ with .Params.image }}
+            {{ $src := strings.TrimPrefix "/" . }}
+            <div class="mx-auto w-56 h-72 overflow-hidden rounded-image mb-6">
+              {{ with resources.Get $src }}
+                {{/* grayscale + webp, 2x the 224px box */}}
+                {{ $ar := div (float .Width) (float .Height) }}
+                {{ $need := math.Ceil (math.Max 448.0 (mul 576.0 $ar)) }}
+                {{ $w := cond (gt $need (float .Width)) .Width (int $need) }}
+                {{ $img := .Resize (printf "%dx webp q85" $w) }}
+                {{ $img = $img.Filter images.Grayscale }}
+                <img src="{{ $img.RelPermalink }}" alt="{{ $.Title }}" width="{{ $img.Width }}" height="{{ $img.Height }}" class="w-full h-full object-cover" style="object-position: center top;" loading="lazy" />
+              {{ else }}
+                {{/* not in assets/ (e.g. the placeholder SVG) */}}
+                <img src="{{ $src | relURL }}" alt="{{ $.Title }}" class="w-full h-full object-cover" style="object-position: center top;" loading="lazy" />
+              {{ end }}
+            </div>
+          {{ end }}
+          <h1 class="h3 mt-4">{{ .Title }}</h1>
+          <div class="content mt-6">
+            {{ .Content }}
+          </div>
+          {{ with .Params.social }}
+          <ul class="social-icons mt-10 text-center">
+            {{ range . }}
+              <li>
+                <a href="{{ .link | safeURL }}" target="_blank" rel="noopener nofollow">
+                  <span class="sr-only">{{ .title }}</span>
+                  <i class="{{ .icon }}"></i>
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

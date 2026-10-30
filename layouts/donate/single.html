@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+  <!-- Intro -->
+  {{ with .Params.intro }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="from-body to-light dark:from-darkmode-body dark:to-darkmode-light rounded-2xl bg-gradient-to-b px-8 py-14">
+        <div class="row justify-center">
+          <div class="lg:col-10">
+            <h2 class="mb-4 text-center">
+              {{ .title | markdownify }}
+            </h2>
+            <div class="content">
+              {{ .text | markdownify }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Donation methods -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        {{ range .Params.methods }}
+        <div class="md:col-4 mb-8">
+          <div class="bg-light dark:bg-darkmode-light rounded-section p-8 h-full">
+            <h4 class="mb-4">{{ .title | markdownify }}</h4>
+            <div class="content">
+              {{ .content | markdownify }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

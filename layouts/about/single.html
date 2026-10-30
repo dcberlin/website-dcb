@@ -1,0 +1,84 @@
+{{ define "main" }}
+
+  {{ $hasIntro := ne (trim .RawContent " \n\r\t") "" }}
+
+  <!-- Intro / embedded media -->
+  {{ if $hasIntro }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-8">
+          <div class="content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Vision -->
+  {{ with .Params.vision }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="bg-light dark:bg-darkmode-light rounded-section px-4 py-16 xl:p-20">
+        <div class="row justify-center">
+          <div class="lg:col-10">
+            <h2 class="mb-4 text-center">
+              {{ .title | markdownify }}
+            </h2>
+            <div class="content">
+              <p>
+                {{ .text | markdownify }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Mission -->
+  {{ with .Params.mission }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="bg-light dark:bg-darkmode-light rounded-section px-4 py-16 xl:p-20">
+        <div class="row justify-center">
+          <div class="lg:col-10">
+            <h2 class="mb-4 text-center">
+              {{ .title | markdownify }}
+            </h2>
+            <div class="content">
+              {{ .text | markdownify }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.values }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="row justify-center mb-12">
+        <div class="lg:col-8 text-center">
+          <h2>{{ .title | markdownify }}</h2>
+        </div>
+      </div>
+      <div class="row justify-center">
+        {{ range .items }}
+        <div class="md:col-6 lg:col-4 mb-8 text-center">
+          <div class="bg-light dark:bg-darkmode-light rounded-section p-8 h-full">
+            <i class="{{ .icon }} text-3xl text-primary mb-4 inline-block"></i>
+            <h4 class="mb-3">{{ .title }}</h4>
+            <p>{{ .description }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

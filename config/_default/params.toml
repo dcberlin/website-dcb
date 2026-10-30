@@ -1,0 +1,96 @@
+#################### default parameters ################################
+# Logo
+logo = "images/logo.png"
+logo_darkmode = "images/logo-darkmode.png"
+# Display size of the logo (source is 1201x522). The logo partial uses these
+# for the width/height attributes and renders a 2x (230px) webp. Without them
+# it stamps the full 1201x522 on the tag, which the 50px height in
+# custom.css then squashes into a stretched image.
+logo_width = "115"
+logo_height = "50"
+favicon = "images/favicon.png"
+
+# Navbar
+navbar_fixed = true
+theme_switcher = false
+theme_default = "system"
+
+# Section
+mainSections = ["news"]
+
+# Contact info
+[contact_info]
+  address = "Oderstrasse 16, 10247 Berlin"
+  phone = "+49 30 221 84083"
+  email = "contact@diasporacivica.berlin"
+
+# Copyright
+copyright = "© 2025 Diaspora Civică Berlin — Rumänische Diaspora Initiative e.V."
+
+# Social links
+[[social]]
+  name = "facebook"
+  icon = "fa-brands fa-facebook"
+  link = "https://www.facebook.com/diasporacivicaberlin"
+
+[[social]]
+  name = "instagram"
+  icon = "fa-brands fa-instagram"
+  link = "https://www.instagram.com/diasporacivicaberlin"
+
+# Metadata
+[metadata]
+  # Key names must match what the basic-seo module reads:
+  # site.Params.metadata.{author,image,description,keywords,twitter}
+  author = "Diaspora Civică Berlin"
+  # Site-wide link-preview fallback, used for every page with no own image.
+  image = "/images/fallback.png"
+  description = "Diaspora Civică Berlin — Rumänische Diaspora Initiative e.V."
+
+# Site Verification (uncomment and add your codes)
+# [site_verification]
+#   google = ""
+#   bing = ""
+
+# Google Tag Manager (uncomment and add your container ID)
+# google_tag_manager = "GTM-XXXXXXX"
+
+# Search
+[search]
+  enable = false
+  primary_color = "#E2382A"
+  show_image = true
+  show_description = true
+  show_tags = true
+  show_categories = true
+
+# Cookie consent (GDPR)
+[cookies]
+  enable = true
+  expire_days = 30
+
+# Preloader
+[preloader]
+  enable = false
+
+# Announcement
+[announcement]
+  enable = false
+
+# Widgets
+[widgets]
+  sidebar = ["categories", "tags"]
+
+# Plugins
+# Font Awesome Free 7.3.1, self-hosted (see assets/plugins/font-awesome/).
+# all.min.css bundles core + solid + regular + brands. Its @font-face rules
+# use url(../webfonts/...), which resolves to the site root — the woff2 files
+# live in static/webfonts/.
+[[plugins.css]]
+  link = "plugins/font-awesome/css/all.min.css"
+
+[[plugins.css]]
+  link = "plugins/swiper/swiper-bundle.css"
+
+[[plugins.js]]
+  link = "plugins/swiper/swiper-bundle.js"
