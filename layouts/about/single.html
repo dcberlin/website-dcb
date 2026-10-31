@@ -2,6 +2,25 @@
 
   {{ $hasIntro := ne (trim .RawContent " \n\r\t") "" }}
 
+  <!-- Banner -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="rounded-section overflow-hidden">
+        {{/* Pre-converted to webp; the image partial serves webp sources
+             as-is, so Size only fills width/height (prevents layout shift).
+             Eager + high priority since it's the LCP. */}}
+        {{ partial "image" (dict
+          "Src" "images/about-banner.webp"
+          "Alt" ""
+          "Size" "2560x1072"
+          "Loading" "eager"
+          "FetchPriority" "high"
+          "Class" "w-full h-auto block"
+        ) }}
+      </div>
+    </div>
+  </section>
+
   <!-- Intro / embedded media -->
   {{ if $hasIntro }}
   <section class="section-sm">
