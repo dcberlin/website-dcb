@@ -13,9 +13,9 @@ mission:
   text: |
     Misiunea Diaspora Civică Berlin este de a sprijini comunitatea românilor din Berlin să fie mai bine informată, mai conectată și mai implicată în viața civică și democratică. 
 
-    Ne propunem sa construim spații de dialog, învățare și colaborare, promovăm participarea civică și reprezentăm vocea comunității în relația cu instituțiile și partenerii relevanți. 
+    Ne propunem să construim spații de dialog, învățare și colaborare, promovăm participarea civică și reprezentăm vocea comunității în relația cu instituțiile și partenerii relevanți. 
 
-    In acelasi timp, ne propunem sa adresam interesele comunității în dialogul cu autoritățile și partenerii din România și Germania, dar si dezvoltăm proiecte care răspund nevoilor identificate împreună cu aceasta. Credem că o comunitate puternică se construiește prin implicare, încredere și colaborare.
+    In același timp, ne propunem să adresăm interesele comunității în dialogul cu autoritățile și partenerii din România și Germania, dar și să dezvoltăm proiecte care răspund nevoilor identificate împreună cu aceasta. Credem că o comunitate puternică se construiește prin implicare, încredere și colaborare.
 
 values:
   title: "Valorile Noastre"

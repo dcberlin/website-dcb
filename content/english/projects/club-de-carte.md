@@ -3,7 +3,7 @@ title: "DCB Book Club"
 date: 2026-04-19
 draft: false
 ongoing: true
-image: "/images/projects/club-de-carte.jpg"
+image: "/images/projects/2026/club-de-carte.jpg"
 ---
 
 The DCB Book Club is an informal space for Romanians in Berlin who want to discuss books – no assigned reading required! We talk freely about titles that inspire, intrigue, or provoke us, from novels to non-fiction such as history, philosophy, economics, psychology, or architecture.

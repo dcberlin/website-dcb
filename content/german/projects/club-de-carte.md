@@ -3,7 +3,7 @@ title: "DCB Buchclub"
 date: 2026-04-19
 draft: false
 ongoing: true
-image: "/images/projects/club-de-carte.jpg"
+image: "/images/projects/2026/club-de-carte.jpg"
 ---
 
 Der DCB Buchclub ist ein informeller Raum für Rumänen in Berlin, die über Bücher diskutieren möchten – ohne vorgegebene Pflichtlektüre! Wir sprechen frei über Titel, die uns inspirieren, faszinieren oder herausfordern, von Romanen bis hin zu Sachbüchern wie Geschichte, Philosophie, Wirtschaft, Psychologie oder Architektur.
