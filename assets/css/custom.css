@@ -15,6 +15,16 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
 }
 
+/* Tailwind v4 preflight resets buttons to cursor: default — restore the hand
+   (also on dropdowns like the language switcher) */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  select:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 /* Vendor class overrides — point bare `rounded` users at the semantic tokens */
 .btn               { border-radius: var(--radius-button); }
 .input-control     { border-radius: var(--radius-image); }
