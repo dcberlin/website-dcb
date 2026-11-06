@@ -30,3 +30,5 @@
   translation: "Aktuelle Projekte"
 - id: projects_past
   translation: "Vergangene Projekte"
+- id: news_all
+  translation: "Alle"

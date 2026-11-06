@@ -1,0 +1,37 @@
+<!-- shared by news/list.html and term.html (category/tag pages) so both look the same -->
+{{ $current := . }}
+<section class="section pt-8">
+  <div class="container">
+    <!-- filter strip: all + categories + tags (the active one is filled) -->
+    <div class="mb-12 flex flex-wrap gap-4">
+      {{ with site.GetPage "/news" }}
+        <a class="btn {{ if eq . $current }}btn-primary{{ else }}btn-outline-primary{{ end }}" href="{{ .RelPermalink }}">
+          {{ i18n "news_all" }} <span class="opacity-60">({{ len .RegularPages }})</span>
+        </a>
+      {{ end }}
+      {{ range $name, $items := site.Taxonomies.categories }}
+        <a class="btn {{ if eq .Page $current }}btn-primary{{ else }}btn-outline-primary{{ end }}" href="{{ .Page.RelPermalink }}">
+          {{ .Page.Title }} <span class="opacity-60">({{ len $items }})</span>
+        </a>
+      {{ end }}
+      {{ range $name, $items := site.Taxonomies.tags }}
+        <a class="btn {{ if eq .Page $current }}btn-primary{{ else }}btn-outline-primary{{ end }}" href="{{ .Page.RelPermalink }}">
+          #{{ .Page.Title }}
+        </a>
+      {{ end }}
+    </div>
+
+    <!-- blog posts: 3 columns at lg, 2 at md, 1 at sm -->
+    <div class="row">
+      {{ $paginator:= .Paginate .RegularPages }}
+      {{ range $paginator.Pages }}
+        <div class="md:col-6 lg:col-4 mb-14">
+          <div class="border border-black dark:border-white rounded-card p-4 h-full">
+            {{ partial "components/blog-card" . }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    {{ partial "components/pagination.html" . }}
+  </div>
+</section>

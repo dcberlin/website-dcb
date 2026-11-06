@@ -30,3 +30,5 @@
   translation: "Ongoing Projects"
 - id: projects_past
   translation: "Past Projects"
+- id: news_all
+  translation: "All"

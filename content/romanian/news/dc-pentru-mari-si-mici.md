@@ -15,5 +15,3 @@ Evenimentele vor contribui şi la dezvoltarea unei conversaţii în jurul a ce �
 Primul eveniment DC Pentru Mari şi Mici a avut loc în luna mai 2017 şi a adunat familii, specialişti în educaţie şi alţi membri DCB interesaţi de educaţie civică.
 
 Discuţiile au pornit de la problema participării copiilor la proteste civice şi au evoluat către teme mai largi precum educaţia civică în sistemul educaţional românesc faţă de cel german şi în general, diferenţe de implicare civică la diferite vârste între cele două ţări.
-
-[DC pentru Mari si mici](/announcement/de-ce-pentru-mari-si-mici/)

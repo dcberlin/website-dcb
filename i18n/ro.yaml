@@ -30,3 +30,5 @@
   translation: "Proiecte curente"
 - id: projects_past
   translation: "Proiecte anterioare"
+- id: news_all
+  translation: "Toate"
