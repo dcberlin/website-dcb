@@ -24,7 +24,7 @@ We are not legally required to appoint a data protection officer. For any questi
 
 We process personal data only where necessary, and only to the extent necessary. We do not sell data, we do not use it for advertising, and we do not build user profiles.
 
-This website uses no web analytics or visitor tracking. There are no contact forms, user accounts or comment sections.
+Apart from the cookieless visitor statistics described in section 3, this website uses no web analytics or visitor tracking. There are no contact forms, user accounts or comment sections.
 
 ### 3. Hosting and log files
 
@@ -33,6 +33,19 @@ The website is hosted on GitHub Pages, a service provided by GitHub, Inc. (San F
 Each time the site is accessed, the hosting provider automatically records the technical data your browser transmits: IP address, date and time of access, the page requested, browser type and version, operating system, and the referring page if there is one.
 
 This data is necessary to deliver and secure the website and to detect abuse. The legal basis is our legitimate interest under Art. 6(1)(f) GDPR. We do not combine this data with other sources and do not use it to identify you.
+
+#### Web analytics with Matomo
+
+We use Matomo, an open-source web analytics tool, to understand how the website is used, for example which pages are visited and how visitors find us. Matomo runs on the server analytics.giscollective.com; the data is not passed on to third parties or used for advertising.
+
+Matomo processes the following data: your IP address in shortened (anonymised) form, the pages visited, date and time of access, the referring page, browser, operating system, device type, language and approximate location (country or city, derived from the shortened IP address).
+
+We use Matomo without cookies. Visits are grouped using a value that changes every day, so you are not recognised across days and no user profiles are created.
+
+The legal basis is our legitimate interest in analysing and improving our website, under Art. 6(1)(f) GDPR. You can object to this at any time using the option below:
+
+<div id="matomo-opt-out"></div>
+<script src="https://analytics.giscollective.com/index.php?module=CoreAdminHome&action=optOutJS&divId=matomo-opt-out&language=auto&showIntro=1"></script>
 
 ### 4. Cookies
 
@@ -131,4 +144,4 @@ Alt-Moabit 59–61, 10555 Berlin, Germany
 
 We update this policy when our activities or the services used on this website change. The version applicable is the one published on this page.
 
-_Last updated: October 2026._
+_Last updated: November 2026._

@@ -24,7 +24,7 @@ Nu avem obligația legală de a numi un responsabil cu protecția datelor. Pentr
 
 Prelucrăm date cu caracter personal doar atunci când este necesar și doar în măsura necesară. Nu vindem date, nu le folosim în scopuri publicitare și nu creăm profiluri de utilizator.
 
-Acest site nu folosește instrumente de analiză web sau de urmărire a vizitatorilor. Nu există formulare de contact, conturi de utilizator sau secțiuni de comentarii.
+Cu excepția statisticilor de vizitare fără cookie-uri descrise în secțiunea 3, acest site nu folosește instrumente de analiză web sau de urmărire a vizitatorilor. Nu există formulare de contact, conturi de utilizator sau secțiuni de comentarii.
 
 ### 3. Găzduire și fișiere jurnal
 
@@ -33,6 +33,19 @@ Site-ul este găzduit pe GitHub Pages, serviciu oferit de GitHub, Inc. (San Fran
 La fiecare accesare, furnizorul de găzduire înregistrează automat datele tehnice transmise de browserul dumneavoastră: adresa IP, data și ora accesării, pagina solicitată, tipul și versiunea browserului, sistemul de operare și, dacă există, pagina de proveniență.
 
 Aceste date sunt necesare pentru livrarea și securitatea site-ului și pentru detectarea abuzurilor. Baza legală este interesul nostru legitim, conform art. 6 alin. (1) lit. f GDPR. Nu combinăm aceste date cu alte surse și nu le folosim pentru a vă identifica.
+
+#### Analiză web cu Matomo
+
+Folosim Matomo, un instrument open-source de analiză web, pentru a înțelege cum este utilizat site-ul, de exemplu ce pagini sunt vizitate și cum ajung vizitatorii la noi. Matomo rulează pe serverul analytics.giscollective.com; datele nu sunt transmise terților și nu sunt folosite în scopuri publicitare.
+
+Matomo prelucrează următoarele date: adresa dumneavoastră IP în formă scurtată (anonimizată), paginile vizitate, data și ora accesării, pagina de proveniență, browserul, sistemul de operare, tipul de dispozitiv, limba și locația aproximativă (țara sau orașul, deduse din adresa IP scurtată).
+
+Folosim Matomo fără cookie-uri. Vizitele sunt grupate pe baza unei valori care se schimbă zilnic, astfel încât nu sunteți recunoscut de la o zi la alta și nu se creează profiluri de utilizator.
+
+Baza legală este interesul nostru legitim de a analiza și îmbunătăți site-ul, conform art. 6 alin. (1) lit. f GDPR. Vă puteți opune oricând folosind opțiunea de mai jos:
+
+<div id="matomo-opt-out"></div>
+<script src="https://analytics.giscollective.com/index.php?module=CoreAdminHome&action=optOutJS&divId=matomo-opt-out&language=auto&showIntro=1"></script>
 
 ### 4. Cookie-uri
 
@@ -131,4 +144,4 @@ Alt-Moabit 59–61, 10555 Berlin, Germania
 
 Actualizăm această politică atunci când se modifică activitatea noastră sau serviciile folosite pe site. Versiunea aplicabilă este cea publicată pe această pagină.
 
-_Ultima actualizare: octombrie 2026._
+_Ultima actualizare: noiembrie 2026._

@@ -24,7 +24,7 @@ Wir sind nicht verpflichtet, einen Datenschutzbeauftragten zu benennen. Bei Frag
 
 Wir verarbeiten personenbezogene Daten nur, soweit dies erforderlich ist, und nur in dem dafür notwendigen Umfang. Wir verkaufen keine Daten, nutzen sie nicht für Werbung und erstellen keine Nutzerprofile.
 
-Diese Website verwendet keine Webanalyse- oder Tracking-Dienste. Es gibt keine Kontaktformulare, keine Benutzerkonten und keine Kommentarfunktion.
+Abgesehen von der in Abschnitt 3 beschriebenen cookielosen Besucherstatistik verwendet diese Website keine Webanalyse- oder Tracking-Dienste. Es gibt keine Kontaktformulare, keine Benutzerkonten und keine Kommentarfunktion.
 
 ### 3. Hosting und Logfiles
 
@@ -33,6 +33,19 @@ Die Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc
 Bei jedem Aufruf der Website erfasst der Hosting-Anbieter automatisch die von Ihrem Browser übermittelten technischen Daten: IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite, Browsertyp und -version, Betriebssystem sowie gegebenenfalls die verweisende Seite.
 
 Diese Daten sind für die Bereitstellung und Sicherheit der Website sowie zur Erkennung von Missbrauch erforderlich. Rechtsgrundlage ist unser berechtigtes Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO. Wir führen diese Daten nicht mit anderen Quellen zusammen und nutzen sie nicht, um Sie zu identifizieren.
+
+#### Webanalyse mit Matomo
+
+Wir nutzen Matomo, eine Open-Source-Software zur Webanalyse, um zu verstehen, wie unsere Website genutzt wird, zum Beispiel welche Seiten aufgerufen werden und wie Besucher zu uns finden. Matomo läuft auf dem Server analytics.giscollective.com; die Daten werden nicht an Dritte weitergegeben und nicht für Werbung genutzt.
+
+Matomo verarbeitet folgende Daten: Ihre IP-Adresse in gekürzter (anonymisierter) Form, die aufgerufenen Seiten, Datum und Uhrzeit des Zugriffs, die verweisende Seite, Browser, Betriebssystem, Gerätetyp, Sprache sowie den ungefähren Standort (Land oder Stadt, abgeleitet aus der gekürzten IP-Adresse).
+
+Wir setzen Matomo ohne Cookies ein. Besuche werden über einen Wert zusammengefasst, der sich täglich ändert. Sie werden daher nicht über mehrere Tage wiedererkannt, und es werden keine Nutzerprofile erstellt.
+
+Rechtsgrundlage ist unser berechtigtes Interesse an der Analyse und Verbesserung unserer Website gemäß Art. 6 Abs. 1 lit. f DSGVO. Sie können dem jederzeit über die folgende Option widersprechen:
+
+<div id="matomo-opt-out"></div>
+<script src="https://analytics.giscollective.com/index.php?module=CoreAdminHome&action=optOutJS&divId=matomo-opt-out&language=auto&showIntro=1"></script>
 
 ### 4. Cookies
 
@@ -131,4 +144,4 @@ Alt-Moabit 59–61, 10555 Berlin, Deutschland
 
 Wir aktualisieren diese Erklärung, wenn sich unsere Tätigkeit oder die auf dieser Website eingesetzten Dienste ändern. Es gilt jeweils die auf dieser Seite veröffentlichte Fassung.
 
-_Letzte Aktualisierung: Oktober 2026._
+_Letzte Aktualisierung: November 2026._
