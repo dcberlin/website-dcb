@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://dcberlin.github.io/website-dcb/"
+baseURL = "https://diasporacivica.berlin/"
 title = "Diaspora Civică Berlin"
 summaryLength = 20
 defaultContentLanguage = "ro"
